@@ -14,6 +14,7 @@
 		A219B8691E31CECC000873F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A219B8671E31CECC000873F1 /* LaunchScreen.storyboard */; };
 		A219B8741E31CECC000873F1 /* Ligue1StadiumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B8731E31CECC000873F1 /* Ligue1StadiumsTests.swift */; };
 		A219B87F1E31CECC000873F1 /* Ligue1StadiumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B87E1E31CECC000873F1 /* Ligue1StadiumsUITests.swift */; };
+		A219B88D1E33C5F0000873F1 /* ClubMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A219B87A1E31CECC000873F1 /* Ligue1StadiumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ligue1StadiumsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A219B87E1E31CECC000873F1 /* Ligue1StadiumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ligue1StadiumsUITests.swift; sourceTree = "<group>"; };
 		A219B8801E31CECC000873F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubMapTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A219B85E1E31CECC000873F1 /* AppDelegate.swift */,
+				A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */,
 				A219B8601E31CECC000873F1 /* ClubsTableViewController.swift */,
 				A219B8621E31CECC000873F1 /* Main.storyboard */,
 				A219B8651E31CECC000873F1 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			files = (
 				A219B8611E31CECC000873F1 /* ClubsTableViewController.swift in Sources */,
 				A219B85F1E31CECC000873F1 /* AppDelegate.swift in Sources */,
+				A219B88D1E33C5F0000873F1 /* ClubMapTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
