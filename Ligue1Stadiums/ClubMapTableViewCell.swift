@@ -10,6 +10,8 @@ import UIKit
 
 class ClubMapTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mapImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

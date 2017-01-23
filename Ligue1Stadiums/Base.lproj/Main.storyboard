@@ -18,13 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gZl-bp-NF4" customClass="ClubMapTableViewCell" customModule="Ligue1Stadiums" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clubMapCell" rowHeight="100" id="gZl-bp-NF4" customClass="ClubMapTableViewCell" customModule="Ligue1Stadiums" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gZl-bp-NF4" id="fJL-kj-b3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4XU-qU-xzv">
+                                            <rect key="frame" x="8" y="8" width="359" height="91"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4XU-qU-xzv" secondAttribute="trailing" constant="8" id="1KI-NL-vC3"/>
+                                        <constraint firstItem="4XU-qU-xzv" firstAttribute="top" secondItem="fJL-kj-b3l" secondAttribute="top" constant="8" id="1gJ-Yj-So5"/>
+                                        <constraint firstAttribute="bottom" secondItem="4XU-qU-xzv" secondAttribute="bottom" id="bS1-qK-vJ3"/>
+                                        <constraint firstItem="4XU-qU-xzv" firstAttribute="leading" secondItem="fJL-kj-b3l" secondAttribute="leading" constant="8" id="gcl-MD-JbJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="mapImageView" destination="4XU-qU-xzv" id="ynU-yc-tkT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +49,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdZ-Yq-9yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="49" y="144"/>
+            <point key="canvasLocation" x="48.799999999999997" y="143.47826086956522"/>
         </scene>
     </scenes>
 </document>
