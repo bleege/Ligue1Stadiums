@@ -13,9 +13,6 @@ class ClubsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 216
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,8 +32,10 @@ class ClubsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "clubMapCell",
                                                  for: indexPath) as! ClubMapTableViewCell
         
-        cell.mapImageView.backgroundColor = UIColor.red
-        
+        cell.mapImageView.backgroundColor = UIColor.white
+        cell.mapImageView.layer.cornerRadius = 10
+        cell.mapImageView.layer.masksToBounds = true
+
         return cell
     }
     
