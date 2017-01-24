@@ -13,34 +13,37 @@
         <scene sceneID="e6c-Dk-pdg">
             <objects>
                 <tableViewController id="QfS-ZZ-rxL" customClass="ClubsTableViewController" customModule="Ligue1Stadiums" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zWs-QY-cqr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="166" sectionHeaderHeight="28" sectionFooterHeight="28" id="zWs-QY-cqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clubMapCell" rowHeight="100" id="gZl-bp-NF4" customClass="ClubMapTableViewCell" customModule="Ligue1Stadiums" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="clubMapCell" id="gZl-bp-NF4" customClass="ClubMapTableViewCell" customModule="Ligue1Stadiums" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="166"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gZl-bp-NF4" id="fJL-kj-b3l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4XU-qU-xzv">
-                                            <rect key="frame" x="8" y="8" width="359" height="91"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="si7-Br-PCp">
+                                            <rect key="frame" x="8" y="8" width="359" height="150"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.2523394742118229" green="1" blue="0.25286666294049664" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="4XU-qU-xzv" secondAttribute="trailing" constant="8" id="1KI-NL-vC3"/>
-                                        <constraint firstItem="4XU-qU-xzv" firstAttribute="top" secondItem="fJL-kj-b3l" secondAttribute="top" constant="8" id="1gJ-Yj-So5"/>
-                                        <constraint firstAttribute="bottom" secondItem="4XU-qU-xzv" secondAttribute="bottom" id="bS1-qK-vJ3"/>
-                                        <constraint firstItem="4XU-qU-xzv" firstAttribute="leading" secondItem="fJL-kj-b3l" secondAttribute="leading" constant="8" id="gcl-MD-JbJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="si7-Br-PCp" secondAttribute="trailing" constant="8" id="5TL-V4-1hF"/>
+                                        <constraint firstItem="si7-Br-PCp" firstAttribute="leading" secondItem="fJL-kj-b3l" secondAttribute="leading" constant="8" id="KqH-W6-HrU"/>
+                                        <constraint firstAttribute="bottom" secondItem="si7-Br-PCp" secondAttribute="bottom" constant="8" id="axo-Cr-DC8"/>
+                                        <constraint firstItem="si7-Br-PCp" firstAttribute="top" secondItem="fJL-kj-b3l" secondAttribute="top" constant="8" id="eDv-ZB-7r3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="mapImageView" destination="4XU-qU-xzv" id="ynU-yc-tkT"/>
+                                    <outlet property="mapImageView" destination="si7-Br-PCp" id="2Fz-G1-bex"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="QfS-ZZ-rxL" id="Fuu-BZ-fLV"/>
                             <outlet property="delegate" destination="QfS-ZZ-rxL" id="r51-rM-m4b"/>

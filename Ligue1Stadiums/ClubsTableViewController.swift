@@ -15,8 +15,7 @@ class ClubsTableViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
 //        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.estimatedRowHeight = 100
-        
+//        tableView.estimatedRowHeight = 216
     }
 
     override func didReceiveMemoryWarning() {
