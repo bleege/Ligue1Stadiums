@@ -15,6 +15,9 @@
 		A219B8741E31CECC000873F1 /* Ligue1StadiumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B8731E31CECC000873F1 /* Ligue1StadiumsTests.swift */; };
 		A219B87F1E31CECC000873F1 /* Ligue1StadiumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B87E1E31CECC000873F1 /* Ligue1StadiumsUITests.swift */; };
 		A219B88D1E33C5F0000873F1 /* ClubMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */; };
+		A23919B11E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
+		A23919B21E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
+		A23919B31E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,7 @@
 		A219B87E1E31CECC000873F1 /* Ligue1StadiumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ligue1StadiumsUITests.swift; sourceTree = "<group>"; };
 		A219B8801E31CECC000873F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubMapTableViewCell.swift; sourceTree = "<group>"; };
+		A23919B01E383E8B0033A528 /* clubs.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clubs.geojson; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 				A219B8621E31CECC000873F1 /* Main.storyboard */,
 				A219B8651E31CECC000873F1 /* Assets.xcassets */,
 				A219B8671E31CECC000873F1 /* LaunchScreen.storyboard */,
+				A23919B01E383E8B0033A528 /* clubs.geojson */,
 				A219B86A1E31CECC000873F1 /* Info.plist */,
 			);
 			path = Ligue1Stadiums;
@@ -236,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A219B8691E31CECC000873F1 /* LaunchScreen.storyboard in Resources */,
+				A23919B11E383E8B0033A528 /* clubs.geojson in Resources */,
 				A219B8661E31CECC000873F1 /* Assets.xcassets in Resources */,
 				A219B8641E31CECC000873F1 /* Main.storyboard in Resources */,
 			);
@@ -245,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23919B21E383E8B0033A528 /* clubs.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23919B31E383E8B0033A528 /* clubs.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +517,7 @@
 				A219B8851E31CECD000873F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A219B8861E31CECD000873F1 /* Build configuration list for PBXNativeTarget "Ligue1StadiumsTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +526,7 @@
 				A219B8881E31CECD000873F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A219B8891E31CECD000873F1 /* Build configuration list for PBXNativeTarget "Ligue1StadiumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +535,7 @@
 				A219B88B1E31CECD000873F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
