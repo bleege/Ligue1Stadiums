@@ -18,6 +18,11 @@
 		A23919B11E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
 		A23919B21E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
 		A23919B31E383E8B0033A528 /* clubs.geojson in Resources */ = {isa = PBXBuildFile; fileRef = A23919B01E383E8B0033A528 /* clubs.geojson */; };
+		A23919B91E39A4A70033A528 /* GeoJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23919B81E39A4A70033A528 /* GeoJSONParser.swift */; };
+		A23919BA1E39A4A70033A528 /* GeoJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23919B81E39A4A70033A528 /* GeoJSONParser.swift */; };
+		A23919BB1E39A4A70033A528 /* GeoJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23919B81E39A4A70033A528 /* GeoJSONParser.swift */; };
+		A2E199C01E3DB91C00E6998B /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E199BF1E3DB91C00E6998B /* Club.swift */; };
+		A2E199C31E3DB96800E6998B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E199C21E3DB96800E6998B /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,9 @@
 		A219B8801E31CECC000873F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubMapTableViewCell.swift; sourceTree = "<group>"; };
 		A23919B01E383E8B0033A528 /* clubs.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = clubs.geojson; sourceTree = "<group>"; };
+		A23919B81E39A4A70033A528 /* GeoJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoJSONParser.swift; sourceTree = "<group>"; };
+		A2E199BF1E3DB91C00E6998B /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		A2E199C21E3DB96800E6998B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E199C31E3DB96800E6998B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +96,7 @@
 				A219B8721E31CECC000873F1 /* Ligue1StadiumsTests */,
 				A219B87D1E31CECC000873F1 /* Ligue1StadiumsUITests */,
 				A219B85C1E31CECC000873F1 /* Products */,
+				A2E199C11E3DB96700E6998B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +121,8 @@
 				A219B8671E31CECC000873F1 /* LaunchScreen.storyboard */,
 				A23919B01E383E8B0033A528 /* clubs.geojson */,
 				A219B86A1E31CECC000873F1 /* Info.plist */,
+				A23919B81E39A4A70033A528 /* GeoJSONParser.swift */,
+				A2E199BF1E3DB91C00E6998B /* Club.swift */,
 			);
 			path = Ligue1Stadiums;
 			sourceTree = "<group>";
@@ -131,6 +143,14 @@
 				A219B8801E31CECC000873F1 /* Info.plist */,
 			);
 			path = Ligue1StadiumsUITests;
+			sourceTree = "<group>";
+		};
+		A2E199C11E3DB96700E6998B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2E199C21E3DB96800E6998B /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23919B91E39A4A70033A528 /* GeoJSONParser.swift in Sources */,
 				A219B8611E31CECC000873F1 /* ClubsTableViewController.swift in Sources */,
+				A2E199C01E3DB91C00E6998B /* Club.swift in Sources */,
 				A219B85F1E31CECC000873F1 /* AppDelegate.swift in Sources */,
 				A219B88D1E33C5F0000873F1 /* ClubMapTableViewCell.swift in Sources */,
 			);
@@ -280,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23919BA1E39A4A70033A528 /* GeoJSONParser.swift in Sources */,
 				A219B8741E31CECC000873F1 /* Ligue1StadiumsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23919BB1E39A4A70033A528 /* GeoJSONParser.swift in Sources */,
 				A219B87F1E31CECC000873F1 /* Ligue1StadiumsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
