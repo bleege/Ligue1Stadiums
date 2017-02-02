@@ -23,7 +23,10 @@ class DataProviderTests: XCTestCase {
     
     func testLoadClubData() {
         var clubs = [Club]()
-        XCTAssertTrue(clubs.count == 0)
+        
+        clubs.append(contentsOf: DataProvider.loadClubData())
+        
+        XCTAssertTrue(clubs.count == 20)
     }
     
 }
