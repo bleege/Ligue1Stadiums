@@ -10,9 +10,12 @@ import UIKit
 
 class ClubsTableViewController: UITableViewController {
 
+    var clubs = [Club]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        loadClubData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,9 +24,22 @@ class ClubsTableViewController: UITableViewController {
     }
 
 
+    func loadClubData() {
+        DispatchQueue.global(qos: .background).async {
+            let clubLoad = DataProvider.loadClubData()
+            
+            DispatchQueue.main.async {
+                self.clubs.removeAll()
+                self.clubs.append(contentsOf: clubLoad)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    
     override func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int{
-        return 4
+        return clubs.count
     }
     
     
