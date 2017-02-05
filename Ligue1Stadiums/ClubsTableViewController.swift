@@ -50,7 +50,13 @@ class ClubsTableViewController: UITableViewController {
         
         cell.mapImageView.backgroundColor = UIColor.white
         cell.mapImageView.layer.cornerRadius = 10
-        cell.mapImageView.layer.masksToBounds = true
+//        cell.mapImageView.layer.masksToBounds = true
+        
+        cell.mapImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.mapImageView.layer.shadowColor = UIColor.black.cgColor
+        cell.mapImageView.layer.shadowRadius = 4
+        cell.mapImageView.layer.shadowOpacity = 0.25
+        cell.mapImageView.layer.masksToBounds = false;
 
         return cell
     }
