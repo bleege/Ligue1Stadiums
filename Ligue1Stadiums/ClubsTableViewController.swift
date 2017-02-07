@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class ClubsTableViewController: UITableViewController {
 
@@ -47,6 +48,28 @@ class ClubsTableViewController: UITableViewController {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "clubMapCell",
                                                  for: indexPath) as! ClubMapTableViewCell
+        
+        // Get Image
+        let club = clubs[indexPath.row]
+        
+        let options = MKMapSnapshotOptions()
+        options.scale = UIScreen.main.scale
+        options.size = cell.mapImageView.frame.size
+        options.camera = MKMapCamera(lookingAtCenter: club.location, fromEyeCoordinate: club.location, eyeAltitude: 1000)
+        
+        let mapMaker: MKMapSnapshotter = MKMapSnapshotter(options: options)
+        mapMaker.start(with: DispatchQueue.global(qos: .background), completionHandler: { snapshot, error in
+            guard snapshot != nil else {
+//                withCallback(nil, error)
+                return
+            }
+            
+            if let image = snapshot?.image {
+//                withCallback(image, nil)
+                print("image  = \(image)")
+                
+            }
+        })
         
         cell.mapImageView.backgroundColor = UIColor.white
         cell.mapImageView.layer.cornerRadius = 10

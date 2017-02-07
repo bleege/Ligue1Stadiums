@@ -26,6 +26,7 @@
 		A2E199C51E3E593700E6998B /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E199C41E3E593700E6998B /* DataProviderTests.swift */; };
 		A2E199C61E401A3B00E6998B /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E199BF1E3DB91C00E6998B /* Club.swift */; };
 		A2E199C71E401A4100E6998B /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E199BF1E3DB91C00E6998B /* Club.swift */; };
+		A2E558181E4793020066931B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E558171E4793020066931B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		A2E199BF1E3DB91C00E6998B /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
 		A2E199C21E3DB96800E6998B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A2E199C41E3E593700E6998B /* DataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		A2E558171E4793020066931B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E558181E4793020066931B /* MapKit.framework in Frameworks */,
 				A2E199C31E3DB96800E6998B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +156,7 @@
 		A2E199C11E3DB96700E6998B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A2E558171E4793020066931B /* MapKit.framework */,
 				A2E199C21E3DB96800E6998B /* CoreLocation.framework */,
 			);
 			name = Frameworks;
