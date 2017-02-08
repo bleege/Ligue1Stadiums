@@ -10,7 +10,7 @@ import UIKit
 
 class ClubMapTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var mapImageView: UIView!
+    @IBOutlet weak var mapImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

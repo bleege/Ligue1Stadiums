@@ -12,6 +12,7 @@ import MapKit
 class ClubsTableViewController: UITableViewController {
 
     var clubs = [Club]()
+    var clubMapImage = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,7 @@ class ClubsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.clubs.removeAll()
                 self.clubs.append(contentsOf: clubLoad)
+                self.clubMapImage.reserveCapacity(self.clubs.count)
                 self.tableView.reloadData()
             }
         }
@@ -58,6 +60,7 @@ class ClubsTableViewController: UITableViewController {
         options.camera = MKMapCamera(lookingAtCenter: club.location, fromEyeCoordinate: club.location, eyeAltitude: 1000)
         
         let mapMaker: MKMapSnapshotter = MKMapSnapshotter(options: options)
+        let row = indexPath.row
         mapMaker.start(with: DispatchQueue.global(qos: .background), completionHandler: { snapshot, error in
             guard snapshot != nil else {
 //                withCallback(nil, error)
@@ -67,7 +70,11 @@ class ClubsTableViewController: UITableViewController {
             if let image = snapshot?.image {
 //                withCallback(image, nil)
                 print("image  = \(image)")
-                
+                DispatchQueue.main.async {
+                    self.clubMapImage.insert(image, at: row)
+                    cell.mapImageView.image = image
+                    self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
+                }
             }
         })
         
