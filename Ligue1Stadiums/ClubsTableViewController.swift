@@ -12,7 +12,7 @@ import MapKit
 class ClubsTableViewController: UITableViewController {
 
     var clubs = [Club]()
-    var clubMapImage = [UIImage]()
+    var clubMapImage = [String:UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,6 @@ class ClubsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.clubs.removeAll()
                 self.clubs.append(contentsOf: clubLoad)
-                self.clubMapImage.reserveCapacity(self.clubs.count)
                 self.tableView.reloadData()
             }
         }
@@ -54,29 +53,34 @@ class ClubsTableViewController: UITableViewController {
         // Get Image
         let club = clubs[indexPath.row]
         
-        let options = MKMapSnapshotOptions()
-        options.scale = UIScreen.main.scale
-        options.size = cell.mapImageView.frame.size
-        options.camera = MKMapCamera(lookingAtCenter: club.location, fromEyeCoordinate: club.location, eyeAltitude: 1000)
+        // Check The Cache First
+        if let img = clubMapImage[club.clubName] {
+            cell.mapImageView.image = img
+        } else {
         
-        let mapMaker: MKMapSnapshotter = MKMapSnapshotter(options: options)
-        let row = indexPath.row
-        mapMaker.start(with: DispatchQueue.global(qos: .background), completionHandler: { snapshot, error in
-            guard snapshot != nil else {
-//                withCallback(nil, error)
-                return
-            }
-            
-            if let image = snapshot?.image {
-//                withCallback(image, nil)
-                print("image  = \(image)")
-                DispatchQueue.main.async {
-                    self.clubMapImage.insert(image, at: row)
-                    cell.mapImageView.image = image
-                    self.tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
+            let options = MKMapSnapshotOptions()
+            options.scale = UIScreen.main.scale
+            options.size = cell.mapImageView.frame.size
+            options.camera = MKMapCamera(lookingAtCenter: club.location, fromEyeCoordinate: club.location, eyeAltitude: 1000)
+        
+            let mapMaker: MKMapSnapshotter = MKMapSnapshotter(options: options)
+            mapMaker.start(with: DispatchQueue.global(qos: .background), completionHandler: { snapshot, error in
+                guard snapshot != nil else {
+//                  withCallback(nil, error)
+                    return
                 }
-            }
-        })
+            
+                if let image = snapshot?.image {
+//                withCallback(image, nil)
+                    print("image  = \(image)")
+                    DispatchQueue.main.async {
+                        self.clubMapImage[club.clubName] = image
+                        cell.mapImageView.image = image
+                        self.tableView.reloadData()
+                    }
+                }
+            })
+        }
         
         cell.mapImageView.backgroundColor = UIColor.white
         cell.mapImageView.layer.cornerRadius = 10
