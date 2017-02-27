@@ -27,7 +27,21 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="si7-Br-PCp" customClass="UIImageView">
                                             <rect key="frame" x="8" y="8" width="359" height="150"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-yL-ceV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29460616439999998" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="li4-2T-whX"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="W4D-yL-ceV" firstAttribute="top" secondItem="si7-Br-PCp" secondAttribute="top" id="c7l-gf-bbO"/>
+                                                <constraint firstAttribute="trailing" secondItem="W4D-yL-ceV" secondAttribute="trailing" id="wgU-pa-84q"/>
+                                                <constraint firstItem="W4D-yL-ceV" firstAttribute="leading" secondItem="si7-Br-PCp" secondAttribute="leading" id="zql-jM-9g0"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
