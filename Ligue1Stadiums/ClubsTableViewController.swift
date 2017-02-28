@@ -55,7 +55,7 @@ class ClubsTableViewController: UITableViewController {
         
         // Check The Cache First
         if let img = clubMapImage[club.clubName] {
-            cell.mapImageView.image = img
+//            cell.mapImageView.image = img
         } else {
         
             let options = MKMapSnapshotOptions()
@@ -74,9 +74,9 @@ class ClubsTableViewController: UITableViewController {
 //                withCallback(image, nil)
                     print("image  = \(image)")
                     DispatchQueue.main.async {
-                        self.clubMapImage[club.clubName] = image
-                        cell.mapImageView.image = image
-                        self.tableView.reloadData()
+//                        self.clubMapImage[club.clubName] = image
+//                        cell.mapImageView.image = image
+//                        self.tableView.reloadData()
                     }
                 }
             })
@@ -84,13 +84,13 @@ class ClubsTableViewController: UITableViewController {
         
         cell.mapImageView.backgroundColor = UIColor.white
         cell.mapImageView.layer.cornerRadius = 10
-//        cell.mapImageView.layer.masksToBounds = true
+        cell.mapImageView.layer.masksToBounds = true
         
         cell.mapImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
         cell.mapImageView.layer.shadowColor = UIColor.black.cgColor
         cell.mapImageView.layer.shadowRadius = 4
         cell.mapImageView.layer.shadowOpacity = 0.25
-        cell.mapImageView.layer.masksToBounds = false;
+        cell.mapImageView.clipsToBounds = false
 
         return cell
     }
