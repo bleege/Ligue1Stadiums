@@ -20,7 +20,8 @@ class ClubMapDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        clubDetailMap.setCenter((club?.location)!, animated: true)
+        let camera = MKMapCamera(lookingAtCenter: (club?.location)!, fromEyeCoordinate: (club?.location)!, eyeAltitude: 3000)
+        clubDetailMap.setCamera(camera, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
