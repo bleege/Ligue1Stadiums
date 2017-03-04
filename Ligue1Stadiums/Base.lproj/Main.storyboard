@@ -76,10 +76,50 @@
                             <outlet property="delegate" destination="QfS-ZZ-rxL" id="r51-rM-m4b"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="4UH-Pa-4me" kind="show" identifier="showClubMapDetailSegue" id="byE-Dx-pHn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdZ-Yq-9yR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="143.47826086956522"/>
+        </scene>
+        <!--Club Map Detail View Controller-->
+        <scene sceneID="DXk-EP-Cuq">
+            <objects>
+                <viewController id="4UH-Pa-4me" customClass="ClubMapDetailViewController" customModule="Ligue1Stadiums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDU-hT-maB"/>
+                        <viewControllerLayoutGuide type="bottom" id="arN-op-3OW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bg3-v7-ztL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-Jc-RTg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-2v-TEb">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </mapView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qbG-Jc-RTg" firstAttribute="top" secondItem="bg3-v7-ztL" secondAttribute="top" id="Bdl-N0-URh"/>
+                            <constraint firstItem="arN-op-3OW" firstAttribute="top" secondItem="qbG-Jc-RTg" secondAttribute="bottom" id="NEh-tv-8vU"/>
+                            <constraint firstAttribute="trailing" secondItem="qbG-Jc-RTg" secondAttribute="trailing" id="SIS-r4-3GD"/>
+                            <constraint firstItem="qbG-Jc-RTg" firstAttribute="leading" secondItem="bg3-v7-ztL" secondAttribute="leading" id="a2B-CL-gHk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clubDetailMap" destination="CBO-2v-TEb" id="mOh-E7-aMa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WoM-on-bSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925.60000000000002" y="143.47826086956522"/>
         </scene>
     </scenes>
 </document>
