@@ -125,6 +125,7 @@
 				A219B85E1E31CECC000873F1 /* AppDelegate.swift */,
 				A219B88C1E33C5F0000873F1 /* ClubMapTableViewCell.swift */,
 				A219B8601E31CECC000873F1 /* ClubsTableViewController.swift */,
+				A2DF9A1B1E6A79AA000FA929 /* ClubMapDetailViewController.swift */,
 				A219B8621E31CECC000873F1 /* Main.storyboard */,
 				A219B8651E31CECC000873F1 /* Assets.xcassets */,
 				A219B8671E31CECC000873F1 /* LaunchScreen.storyboard */,
@@ -132,7 +133,6 @@
 				A219B86A1E31CECC000873F1 /* Info.plist */,
 				A23919B81E39A4A70033A528 /* DataProvider.swift */,
 				A2E199BF1E3DB91C00E6998B /* Club.swift */,
-				A2DF9A1B1E6A79AA000FA929 /* ClubMapDetailViewController.swift */,
 			);
 			path = Ligue1Stadiums;
 			sourceTree = "<group>";

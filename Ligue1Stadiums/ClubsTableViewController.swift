@@ -13,6 +13,7 @@ class ClubsTableViewController: UITableViewController {
 
     var clubs = [Club]()
     var clubMapImage = [String:UIImage]()
+    var selectedClub:Club?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +96,19 @@ class ClubsTableViewController: UITableViewController {
 //        cell.mapImageView.clipsToBounds = false
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedClub = clubs[indexPath.row]
+        self.performSegue(withIdentifier: "showClubMapDetailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if (segue.identifier == "showClubMapDetailSegue") {
+            let dest = segue.destination as! ClubMapDetailViewController
+            dest.club = selectedClub
+        }
     }
     
 }

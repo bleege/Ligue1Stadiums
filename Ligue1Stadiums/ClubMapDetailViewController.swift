@@ -12,11 +12,15 @@ import MapKit
 class ClubMapDetailViewController: UIViewController {
 
     @IBOutlet weak var clubDetailMap: MKMapView!
-    
+
+    var club: Club?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        clubDetailMap.setCenter((club?.location)!, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
