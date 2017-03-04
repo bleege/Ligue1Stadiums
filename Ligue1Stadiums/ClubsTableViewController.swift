@@ -86,6 +86,8 @@ class ClubsTableViewController: UITableViewController {
         cell.mapImageView.layer.cornerRadius = 10
         cell.mapImageView.layer.masksToBounds = true
         
+        cell.clubNameLabel.text = club.clubName
+        
 //        cell.mapImageView.layer.shadowOffset = CGSize(width: 0, height: 0)
 //        cell.mapImageView.layer.shadowColor = UIColor.black.cgColor
 //        cell.mapImageView.layer.shadowRadius = 4

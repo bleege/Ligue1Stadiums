@@ -11,6 +11,7 @@ import UIKit
 class ClubMapTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mapImageView: UIImageView!
+    @IBOutlet weak var clubNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -30,9 +30,21 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W4D-yL-ceV">
                                                     <rect key="frame" x="0.0" y="0.0" width="359" height="30"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Club Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb1-Qd-GUc">
+                                                            <rect key="frame" x="8" y="5" width="343" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29460616439999998" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="vb1-Qd-GUc" secondAttribute="trailing" constant="8" id="9Pi-Ge-QQD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="vb1-Qd-GUc" secondAttribute="bottom" constant="4" id="Tsx-4F-xfa"/>
+                                                        <constraint firstItem="vb1-Qd-GUc" firstAttribute="leading" secondItem="W4D-yL-ceV" secondAttribute="leading" constant="8" id="WId-VQ-ypG"/>
                                                         <constraint firstAttribute="height" constant="30" id="li4-2T-whX"/>
+                                                        <constraint firstItem="vb1-Qd-GUc" firstAttribute="top" secondItem="W4D-yL-ceV" secondAttribute="top" constant="5" id="wAA-1I-P93"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -53,6 +65,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="clubNameLabel" destination="vb1-Qd-GUc" id="h2B-6X-YEP"/>
                                     <outlet property="mapImageView" destination="si7-Br-PCp" id="2Fz-G1-bex"/>
                                 </connections>
                             </tableViewCell>
