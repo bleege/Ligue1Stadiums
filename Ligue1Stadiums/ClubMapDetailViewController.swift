@@ -29,6 +29,9 @@ class ClubMapDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func handleCloseTap(_ sender: Any) {
+        self.performSegue(withIdentifier: "unwindToClubsTableSeque", sender: self)
+    }
 
     /*
     // MARK: - Navigation

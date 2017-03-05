@@ -111,5 +111,8 @@ class ClubsTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToClubsTable(segue: UIStoryboardSegue) { }
+
+    
 }
 

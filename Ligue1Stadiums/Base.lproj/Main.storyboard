@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,30 +97,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-Jc-RTg">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-2v-TEb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-2v-TEb">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    </mapView>
-                                </subviews>
-                            </stackView>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZT-4J-dJn">
+                                <rect key="frame" x="317" y="90" width="38" height="38"/>
+                                <state key="normal" image="Image"/>
+                                <connections>
+                                    <action selector="handleCloseTap:" destination="4UH-Pa-4me" eventType="touchUpInside" id="u50-vi-QIh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qbG-Jc-RTg" firstAttribute="top" secondItem="bg3-v7-ztL" secondAttribute="top" id="Bdl-N0-URh"/>
-                            <constraint firstItem="arN-op-3OW" firstAttribute="top" secondItem="qbG-Jc-RTg" secondAttribute="bottom" id="NEh-tv-8vU"/>
-                            <constraint firstAttribute="trailing" secondItem="qbG-Jc-RTg" secondAttribute="trailing" id="SIS-r4-3GD"/>
-                            <constraint firstItem="qbG-Jc-RTg" firstAttribute="leading" secondItem="bg3-v7-ztL" secondAttribute="leading" id="a2B-CL-gHk"/>
+                            <constraint firstItem="MZT-4J-dJn" firstAttribute="top" secondItem="sDU-hT-maB" secondAttribute="bottom" constant="70" id="5FH-75-QYa"/>
+                            <constraint firstItem="CBO-2v-TEb" firstAttribute="top" secondItem="bg3-v7-ztL" secondAttribute="top" id="CwV-bV-PDt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MZT-4J-dJn" secondAttribute="trailing" constant="4" id="Eru-Bm-1R1"/>
+                            <constraint firstItem="arN-op-3OW" firstAttribute="top" secondItem="CBO-2v-TEb" secondAttribute="bottom" id="X0y-Bd-YWr"/>
+                            <constraint firstAttribute="trailing" secondItem="CBO-2v-TEb" secondAttribute="trailing" id="Yrl-81-Yjj"/>
+                            <constraint firstItem="CBO-2v-TEb" firstAttribute="leading" secondItem="bg3-v7-ztL" secondAttribute="leading" id="cW1-nJ-SZI"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="clubDetailMap" destination="CBO-2v-TEb" id="mOh-E7-aMa"/>
+                        <segue destination="M22-9G-g3a" kind="unwind" identifier="unwindToClubsTableSeque" unwindAction="unwindToClubsTableWithSegue:" id="Ccq-cc-lh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoM-on-bSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M22-9G-g3a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="925.60000000000002" y="143.47826086956522"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="38" height="38"/>
+    </resources>
 </document>
