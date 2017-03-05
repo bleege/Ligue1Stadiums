@@ -18,6 +18,11 @@ class ClubsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        // Display below Status bar
+        let inset = UIEdgeInsets(top: UIApplication.shared.statusBarFrame.size.height, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = inset        
+        
         loadClubData()
     }
 
