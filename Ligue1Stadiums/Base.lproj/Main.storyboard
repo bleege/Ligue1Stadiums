@@ -101,7 +101,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MZT-4J-dJn">
-                                <rect key="frame" x="317" y="90" width="38" height="38"/>
+                                <rect key="frame" x="317" y="46" width="38" height="38"/>
                                 <state key="normal" image="Image"/>
                                 <connections>
                                     <action selector="handleCloseTap:" destination="4UH-Pa-4me" eventType="touchUpInside" id="u50-vi-QIh"/>
@@ -110,7 +110,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MZT-4J-dJn" firstAttribute="top" secondItem="sDU-hT-maB" secondAttribute="bottom" constant="70" id="5FH-75-QYa"/>
+                            <constraint firstItem="MZT-4J-dJn" firstAttribute="top" secondItem="sDU-hT-maB" secondAttribute="bottom" constant="26" id="5FH-75-QYa"/>
                             <constraint firstItem="CBO-2v-TEb" firstAttribute="top" secondItem="bg3-v7-ztL" secondAttribute="top" id="CwV-bV-PDt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MZT-4J-dJn" secondAttribute="trailing" constant="4" id="Eru-Bm-1R1"/>
                             <constraint firstItem="arN-op-3OW" firstAttribute="top" secondItem="CBO-2v-TEb" secondAttribute="bottom" id="X0y-Bd-YWr"/>
